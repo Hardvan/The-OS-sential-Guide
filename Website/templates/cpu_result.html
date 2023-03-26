@@ -15,6 +15,17 @@
       crossorigin="anonymous"
     />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700;800&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/cpu_result.css" />
+
     <!-- Bootstrap JS -->
     <!-- JavaScript Bundle with Popper -->
     <script
@@ -25,97 +36,118 @@
   </head>
 
   <body>
-    <h1>CPU Result</h1>
-    <p><strong>FCFS Algorithm:</strong></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Process ID</th>
-          <th>Arrival Time</th>
-          <th>Burst Time</th>
-          <th>Priority</th>
-          <th>Completion Time</th>
-          <th>Waiting Time</th>
-          <th>Turnaround Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for i in range(FCFS_result.processes|length) %}
-        <tr>
-          <td>{{ FCFS_result.processes[i][0] }}</td>
-          <td>{{ FCFS_result.processes[i][1] }}</td>
-          <td>{{ FCFS_result.processes[i][2] }}</td>
-          <td>{{ FCFS_result.processes[i][3] }}</td>
-          <td>{{ FCFS_result.completion_times[i] }}</td>
-          <td>{{ FCFS_result.waiting_times[i] }}</td>
-          <td>{{ FCFS_result.turnaround_times[i] }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <p>Average Waiting Time: {{ FCFS_result.average_waiting_time }}</p>
-    <p>Average Turnaround Time: {{ FCFS_result.average_turnaround_time }}</p>
+    <div class="container MyContainer">
+      <h1 class="text-center mb-4 ResultHeading">CPU Result</h1>
+      <div class="row mb-4">
+        <div class="col MyColumn">
+          <h2 class="text-center AlgoHeading">FCFS Algorithm</h2>
+          <table class="table MyTable">
+            <thead class="thead-dark">
+              <tr>
+                <th>Process ID</th>
+                <th>Arrival Time</th>
+                <th>Burst Time</th>
+                <th>Priority</th>
+                <th>Completion Time</th>
+                <th>Waiting Time</th>
+                <th>Turnaround Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in range(FCFS_result.processes|length) %}
+              <tr>
+                <td>{{ FCFS_result.processes[i][0] }}</td>
+                <td>{{ FCFS_result.processes[i][1] }}</td>
+                <td>{{ FCFS_result.processes[i][2] }}</td>
+                <td>{{ FCFS_result.processes[i][3] }}</td>
+                <td>{{ FCFS_result.completion_times[i] }}</td>
+                <td>{{ FCFS_result.waiting_times[i] }}</td>
+                <td>{{ FCFS_result.turnaround_times[i] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <p class="text-center MyPara">
+            Average Waiting Time: {{ FCFS_result.average_waiting_time }}
+          </p>
+          <p class="text-center MyPara">
+            Average Turnaround Time: {{ FCFS_result.average_turnaround_time }}
+          </p>
+        </div>
 
-    <p><strong>SJF Algorithm:</strong></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Process ID</th>
-          <th>Arrival Time</th>
-          <th>Burst Time</th>
-          <th>Priority</th>
-          <th>Completion Time</th>
-          <th>Waiting Time</th>
-          <th>Turnaround Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for i in range(SJF_result.processes|length) %}
-        <tr>
-          <td>{{ SJF_result.processes[i][0] }}</td>
-          <td>{{ SJF_result.processes[i][1] }}</td>
-          <td>{{ SJF_result.processes[i][2] }}</td>
-          <td>{{ SJF_result.processes[i][3] }}</td>
-          <td>{{ SJF_result.completion_times[i] }}</td>
-          <td>{{ SJF_result.waiting_times[i] }}</td>
-          <td>{{ SJF_result.turnaround_times[i] }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <p>Average Waiting Time: {{ SJF_result.average_waiting_time }}</p>
-    <p>Average Turnaround Time: {{ SJF_result.average_turnaround_time }}</p>
+        <div class="col MyColumn">
+          <h2 class="text-center AlgoHeading">SJF Algorithm</h2>
+          <table class="table MyTable">
+            <thead class="thead-dark">
+              <tr>
+                <th>Process ID</th>
+                <th>Arrival Time</th>
+                <th>Burst Time</th>
+                <th>Priority</th>
+                <th>Completion Time</th>
+                <th>Waiting Time</th>
+                <th>Turnaround Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in range(SJF_result.processes|length) %}
+              <tr>
+                <td>{{ SJF_result.processes[i][0] }}</td>
+                <td>{{ SJF_result.processes[i][1] }}</td>
+                <td>{{ SJF_result.processes[i][2] }}</td>
+                <td>{{ SJF_result.processes[i][3] }}</td>
+                <td>{{ SJF_result.completion_times[i] }}</td>
+                <td>{{ SJF_result.waiting_times[i] }}</td>
+                <td>{{ SJF_result.turnaround_times[i] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <p class="text-center MyPara">
+            Average Waiting Time: {{ SJF_result.average_waiting_time }}
+          </p>
+          <p class="text-center MyPara">
+            Average Turnaround Time: {{ SJF_result.average_turnaround_time }}
+          </p>
 
-    <p><strong>Priority Algorithm:</strong></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Process ID</th>
-          <th>Arrival Time</th>
-          <th>Burst Time</th>
-          <th>Priority</th>
-          <th>Completion Time</th>
-          <th>Waiting Time</th>
-          <th>Turnaround Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for i in range(Priority_result.processes|length) %}
-        <tr>
-          <td>{{ Priority_result.processes[i][0] }}</td>
-          <td>{{ Priority_result.processes[i][1] }}</td>
-          <td>{{ Priority_result.processes[i][2] }}</td>
-          <td>{{ Priority_result.processes[i][3] }}</td>
-          <td>{{ Priority_result.completion_times[i] }}</td>
-          <td>{{ Priority_result.waiting_times[i] }}</td>
-          <td>{{ Priority_result.turnaround_times[i] }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <p>Average Waiting Time: {{ Priority_result.average_waiting_time }}</p>
-    <p>
-      Average Turnaround Time: {{ Priority_result.average_turnaround_time }}
-    </p>
+          <div class="col MyColumn">
+            <h2 class="text-center AlgoHeading">Priority Algorithm</h2>
+            <table class="table MyTable">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Process ID</th>
+                  <th>Arrival Time</th>
+                  <th>Burst Time</th>
+                  <th>Priority</th>
+                  <th>Completion Time</th>
+                  <th>Waiting Time</th>
+                  <th>Turnaround Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in range(Priority_result.processes|length) %}
+                <tr>
+                  <td>{{ Priority_result.processes[i][0] }}</td>
+                  <td>{{ Priority_result.processes[i][1] }}</td>
+                  <td>{{ Priority_result.processes[i][2] }}</td>
+                  <td>{{ Priority_result.processes[i][3] }}</td>
+                  <td>{{ Priority_result.completion_times[i] }}</td>
+                  <td>{{ Priority_result.waiting_times[i] }}</td>
+                  <td>{{ Priority_result.turnaround_times[i] }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <p class="text-center MyPara">
+              Average Waiting Time: {{ Priority_result.average_waiting_time }}
+            </p>
+            <p class="text-center MyPara">
+              Average Turnaround Time: {{
+              Priority_result.average_turnaround_time }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
