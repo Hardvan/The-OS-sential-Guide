@@ -2,7 +2,7 @@
 # run the command: python app.py
 
 from flask import Flask, render_template, request
-from scheduling_algos import fcfs, sjf
+import scheduling_algos
 
 app = Flask(__name__)
 
@@ -38,12 +38,18 @@ def cpu():
             processes.append((pid, arrival_time, burst_time, priority))
 
         # Run FCFS algorithm
-        FCFS_result = fcfs(processes)
+        FCFS_result = scheduling_algos.fcfs(processes)
 
         # Run SJF algorithm
-        SJF_result = sjf(processes)
+        SJF_result = scheduling_algos.sjf(processes)
 
-        return render_template('cpu_result.html', FCFS_result=FCFS_result, SJF_result=SJF_result)
+        # Run Priority algorithm
+        Priority_result = scheduling_algos.priority(processes)
+
+        return render_template('cpu_result.html',
+                               FCFS_result=FCFS_result,
+                               SJF_result=SJF_result,
+                               Priority_result=Priority_result)
 
     return render_template('cpu.html')
 
