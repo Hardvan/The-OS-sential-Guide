@@ -51,7 +51,7 @@
       </div>
     </nav>
 
-    <h1>This is the CPU Scheduling page</h1>
+    <h1 class="PageTitle">CPU Scheduling</h1>
 
     {# Introduction #}
     <div class="Introduction">
@@ -92,6 +92,56 @@
           </p>
         </div>
       </div>
+    </div>
+
+    {# Scheduling Algorithms Form #}
+    <h2 class="FormHeading">CPU Scheduling Form</h2>
+    <div class="Form">
+      <form method="POST" action="{{ url_for('cpu') }}">
+        {% for i in range(1, 5) %}
+        <div class="form-group">
+          {# Arrival Time #}
+          <label for="arrival_time">Arrival Time:</label>
+          <input
+            type="number"
+            name="arrival_time_{{ i }}"
+            id="arrival_time_{{ i }}"
+            class="form-control"
+            value="{{ i-1 }}"
+            required
+          />
+        </div>
+        <div class="form-group">
+          {# Burst Time #}
+          <label for="burst_time">Burst Time:</label>
+          <input
+            type="number"
+            name="burst_time_{{ i }}"
+            id="burst_time_{{ i }}"
+            class="form-control"
+            value="{{ i*2 }}"
+            required
+          />
+        </div>
+        <div class="form-group">
+          {# Priority #}
+          <label for="priority">Priority:</label>
+          <input
+            type="number"
+            name="priority_{{ i }}"
+            id="priority_{{ i }}"
+            class="form-control"
+            value="{{ i }}"
+            required
+          />
+        </div>
+        {% if i != 4 %}
+        <hr />
+        {% endif %} {% endfor %}
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
   </body>
 </html>
