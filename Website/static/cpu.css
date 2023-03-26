@@ -145,6 +145,14 @@
   margin: 0 auto;
 }
 
+.Algorithm figcaption {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* * CPU Scheduling Form */
 .FormHeading {
   text-align: center;
