@@ -104,8 +104,49 @@
       </div>
     </div>
 
+    {# Scheduling Algorithms #}
+    <h2 class="AlgorithmsHeading">Scheduling Algorithms</h2>
+    <div class="Algorithms">
+      <div class="Algorithm">
+        <img src="../static/fcfs_image.jpg" alt="Image description" />
+        <h3>First-Come, First-Serve (FCFS)</h3>
+        <p>
+          FCFS is a non-preemptive scheduling algorithm that executes processes
+          in the order in which they arrive in the ready queue. The waiting time
+          for each process is simply the sum of the burst times of all processes
+          that arrived before it. FCFS is simple and easy to implement, but it
+          can lead to long waiting times if a process with a long burst time
+          arrives early in the ready queue.
+        </p>
+      </div>
+      <div class="Algorithm">
+        <img src="../static/sjf_image.png" alt="Image description" />
+        <h3>Shortest Job First (SJF)</h3>
+        <p>
+          SJF is a non-preemptive scheduling algorithm that executes the process
+          with the shortest burst time first. This algorithm provides the
+          minimum average waiting time for a given set of processes. However, it
+          requires knowledge of the burst times of all processes in advance,
+          which is often not available in real-world scenarios.
+        </p>
+      </div>
+      <div class="Algorithm">
+        <img src="../static/priority_image.jpg" alt="Image description" />
+        <h3>Priority Scheduling</h3>
+        <p>
+          Priority scheduling is a scheduling algorithm that assigns a priority
+          to each process and executes the process with the highest priority
+          first. This algorithm can be either preemptive or non-preemptive. In
+          the preemptive version, a running process can be interrupted by a
+          higher priority process, while in the non-preemptive version, a
+          running process will not be interrupted. Priority scheduling can lead
+          to starvation if a low-priority process never gets a chance to run.
+        </p>
+      </div>
+    </div>
+
     {# Scheduling Algorithms Form #}
-    <h2 class="FormHeading">CPU Scheduling Form</h2>
+    <h2 class="FormHeading">Try CPU Scheduling yourself!</h2>
     <div class="Form">
       <form method="POST" action="{{ url_for('cpu') }}">
         {% for i in range(1, 5) %}
