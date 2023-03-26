@@ -1,6 +1,16 @@
+/* Storing colors */
+:root {
+  --main-color: #112d4e;
+  --secondary-color: #3f72af;
+}
+
 .PageTitle {
   text-align: center;
   margin: 20px;
+  font-size: 3.7rem;
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 .Introduction {
@@ -25,9 +35,23 @@
   text-align: justify;
 }
 
+.Introduction h2 {
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.Introduction p {
+  font-family: "Work Sans", sans-serif;
+  /* color: #dbe2ef; */
+}
+
 .TypesHeading {
   text-align: center;
   margin-bottom: 42px;
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--secondary-color);
 }
 
 .Types {
@@ -35,6 +59,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center; /* Center align the child elements */
+  margin: 0 50px;
 }
 
 .Types-Content {
@@ -64,10 +89,13 @@
 .Types-Content-1 h3,
 .Types-Content-2 h3 {
   text-align: center;
+  font-family: "Vollkorn", serif;
+  margin: 20px;
 }
 
 .Types-Content-1 p,
 .Types-Content-2 p {
   text-align: justify;
   padding: 0 15px;
+  font-family: "Work Sans", sans-serif;
 }
