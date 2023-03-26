@@ -8,11 +8,22 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    """Home Page
+
+    Returns:
+        [html]: [Home Page]
+    """
+
     return render_template("home.html")
 
 
 @app.route('/cpu')
 def cpu():
+    """CPU Scheduling Page
+
+    Returns:
+        [html]: [CPU Scheduling Page]
+    """
     return render_template("cpu.html")
 
 
