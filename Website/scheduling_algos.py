@@ -100,7 +100,7 @@ def sjf(processes):
     average_turnaround_time = sum(turnaround_times) / len(turnaround_times)
 
     result = {}
-    result['processes'] = processes_sorted
+    result['processes'] = processes
     result['completion_times'] = completion_times
     result['waiting_times'] = waiting_times
     result['turnaround_times'] = turnaround_times
