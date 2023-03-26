@@ -63,7 +63,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center; /* Center align the child elements */
-  margin: 0 50px;
+  margin: 0 auto; /* Center align the div */
+  max-width: 1100px; /* Add a max-width to prevent the div from stretching too much */
 }
 
 .Types-Content {
