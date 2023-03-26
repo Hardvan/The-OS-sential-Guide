@@ -1,0 +1,68 @@
+.Introduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.Introduction img {
+  width: 42%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.Introduction div {
+  width: 50%;
+  text-align: justify;
+}
+
+.TypesHeading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.Types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center; /* Center align the child elements */
+}
+
+.Types-Content {
+  display: flex;
+  width: 100%;
+}
+
+.Types-Content-1,
+.Types-Content-2 {
+  flex-basis: 45%;
+}
+
+.Types-Content-1 img {
+  display: block;
+  margin: 0 auto;
+  width: 73%;
+  height: auto;
+}
+
+.Types-Content-2 img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+}
+
+.Types-Content-1 h3,
+.Types-Content-2 h3 {
+  text-align: center;
+}
+
+.Types-Content-1 p,
+.Types-Content-2 p {
+  text-align: justify;
+  padding: 0 15px;
+}

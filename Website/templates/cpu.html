@@ -15,6 +15,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="../static/cpu.css" />
+
     <!-- Bootstrap JS -->
     <!-- JavaScript Bundle with Popper -->
     <script
@@ -25,6 +28,70 @@
   </head>
 
   <body>
+    {# Navbar #}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{url_for('index')}}">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('cpu')}}">CPU Scheduling</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <h1>This is the CPU Scheduling page</h1>
+
+    {# Introduction #}
+    <div class="Introduction">
+      <img src="../static/Cpu_Intro.png" alt="Image description" />
+      <div>
+        <h2>Introduction</h2>
+        <p>
+          CPU scheduling is the process of interchanging between executing
+          processes, which serves as the foundation of multiprogrammed systems.
+          This transition guarantees that the computer's CPU usage is optimized,
+          resulting in higher productivity.
+        </p>
+      </div>
+    </div>
+
+    {# Types of CPU Scheduling #}
+    <h2 class="TypesHeading">Types of CPU Scheduling</h2>
+    <div class="Types">
+      <div class="Types-Content">
+        <div class="Types-Content-1">
+          <img src="../static/Cpu_Type1.jpg" alt="Image description" />
+          <h3>Non-Preemptive Scheduling</h3>
+          <p>
+            Non-preemptive scheduling is a scheduling algorithm that does not
+            allow a process to be interrupted by another process of higher
+            priority. This means that once a process is running, it will not be
+            interrupted until it is finished or blocked.
+          </p>
+        </div>
+        <div class="Types-Content-2">
+          <img src="../static/Cpu_Type2.png" alt="Image description" />
+          <h3>Preemptive Scheduling</h3>
+          <p>
+            Preemptive scheduling is a scheduling algorithm that allows a
+            process to be interrupted by another process of higher priority.
+            This means that once a process is running, it may be interrupted
+            until it is finished or blocked.
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
