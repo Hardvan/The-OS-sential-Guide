@@ -13,6 +13,8 @@
   color: var(--main-color);
 }
 
+/* * Introduction */
+
 .Introduction {
   display: flex;
   flex-direction: row;
@@ -45,6 +47,8 @@
   font-family: "Work Sans", sans-serif;
   /* color: #dbe2ef; */
 }
+
+/* * Types of CPU Scheduling */
 
 .TypesHeading {
   text-align: center;
@@ -98,4 +102,69 @@
   text-align: justify;
   padding: 0 15px;
   font-family: "Work Sans", sans-serif;
+}
+
+/* CPU Scheduling Form */
+.FormHeading {
+  text-align: center;
+  margin-top: 42px;
+  margin-bottom: 42px;
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.Form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px;
+  text-align: center; /* center align form */
+  max-width: 400px; /* set max-width to reduce input width */
+  margin-left: auto; /* center align form horizontally */
+  margin-right: auto;
+  font-family: "Work Sans", sans-serif;
+}
+
+.Form h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.Form label {
+  display: inline-block;
+  font-weight: bold;
+  text-align: left; /* left align labels */
+  width: 30%; /* set label width */
+}
+
+.Form input[type="number"] {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-left: 2%; /* add some margin between label and input */
+  max-width: 65%; /* reduce input width */
+}
+
+.Form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: block; /* display button as block element */
+  margin-left: auto; /* center align button horizontally */
+  margin-right: auto;
+  width: 200px; /* set button width */
+}
+
+.Form button[type="submit"]:hover {
+  background-color: #0069d9;
 }
