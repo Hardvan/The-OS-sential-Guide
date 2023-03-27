@@ -150,6 +150,25 @@
 
     {# Scheduling Algorithms Form #}
     <h2 class="FormHeading">Try CPU Scheduling yourself!</h2>
+
+    {# Ask number of processes from user #}
+    <div class="Form">
+      <form method="POST" action="{{url_for('cpu')}}">
+        <div class="form-group">
+          <label for="num_processes">Number of Processes:</label>
+          <input
+            type="number"
+            name="num_processes"
+            id="num_processes"
+            class="form-control"
+            value="4"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
     <div class="Form">
       <form method="POST" action="{{ url_for('cpu_result') }}">
         {% for i in range(1, 5) %}

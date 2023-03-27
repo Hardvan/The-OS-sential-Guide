@@ -26,6 +26,13 @@ def cpu():
         [html]: [CPU Scheduling Page]
     """
 
+    if request.method == 'POST':
+
+        no_processes = int(request.form.get('num_processes'))
+        print(no_processes)
+
+        return render_template('cpu.html', no_processes=no_processes)
+
     return render_template('cpu.html')
 
 
