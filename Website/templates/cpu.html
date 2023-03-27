@@ -169,9 +169,10 @@
       </form>
     </div>
 
+    {% if no_processes != 0 %}
     <div class="Form">
       <form method="POST" action="{{ url_for('cpu_result') }}">
-        {% for i in range(1, 5) %}
+        {% for i in range(1, no_processes+1) %}
         <h3>Process {{ i }}</h3>
         <div class="form-group">
           {# Arrival Time #}
@@ -209,7 +210,7 @@
             required
           />
         </div>
-        {% if i != 4 %}
+        {% if i != no_processes %}
         <hr />
         {% endif %} {% endfor %}
         <div class="form-group">
@@ -217,5 +218,6 @@
         </div>
       </form>
     </div>
+    {% endif %}
   </body>
 </html>

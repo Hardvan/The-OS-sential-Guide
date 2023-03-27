@@ -6,6 +6,8 @@ import scheduling_algos
 
 app = Flask(__name__)
 
+no_processes = 0
+
 
 @app.route('/')
 def index():
@@ -28,12 +30,13 @@ def cpu():
 
     if request.method == 'POST':
 
+        global no_processes
         no_processes = int(request.form.get('num_processes'))
         print(no_processes)
 
         return render_template('cpu.html', no_processes=no_processes)
 
-    return render_template('cpu.html')
+    return render_template('cpu.html', no_processes=no_processes)
 
 
 @app.route('/cpu_result', methods=['GET', 'POST'])
@@ -43,7 +46,7 @@ def cpu_result():
 
         # Converting form data to a list of tuples
         processes = []
-        for i in range(1, 5):
+        for i in range(1, no_processes+1):
             pid = f'P{i}'
             arrival_time = int(request.form.get(f'arrival_time_{i}'))
             burst_time = int(request.form.get(f'burst_time_{i}'))
