@@ -26,6 +26,12 @@ def cpu():
         [html]: [CPU Scheduling Page]
     """
 
+    return render_template('cpu.html')
+
+
+@app.route('/cpu_result', methods=['GET', 'POST'])
+def cpu_result():
+
     if request.method == 'POST':
 
         # Converting form data to a list of tuples
@@ -50,8 +56,6 @@ def cpu():
                                FCFS_result=FCFS_result,
                                SJF_result=SJF_result,
                                Priority_result=Priority_result)
-
-    return render_template('cpu.html')
 
 
 if __name__ == "__main__":
