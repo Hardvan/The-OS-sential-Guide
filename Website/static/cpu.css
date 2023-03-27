@@ -71,7 +71,11 @@
   width: 100%;
 }
 
-.Types-Content-1,
+.Types-Content-1 {
+  flex-basis: 45%;
+  margin-right: 100px;
+}
+
 .Types-Content-2 {
   flex-basis: 45%;
 }
