@@ -162,3 +162,64 @@ def priority(processes):
     result['average_turnaround_time'] = average_turnaround_time
 
     return result
+
+
+def round_robin(processes, quantum):
+    """Round Robin CPU Scheduling Algorithm
+
+    Args:
+        processes (list): List of processes (tuples)
+        quantum (int): Time quantum for each process
+
+    Returns:
+        result (dict): Dictionary containing the following:
+        - processes (list): List of processes (tuples)
+        - completion_times (list): List of completion times (int)
+        - waiting_times (list): List of waiting times (int)
+        - turnaround_times (list): List of turnaround times (int)
+        - average_waiting_time (float): Average waiting time (float)
+        - average_turnaround_time (float): Average turnaround time (float)
+    """
+
+    processes = copy.deepcopy(processes)
+
+    completion_times = [0] * len(processes)
+    waiting_times = [0] * len(processes)
+    turnaround_times = [0] * len(processes)
+    remaining_times = [burst_time for pid,
+                       arrival_time, burst_time, priority in processes]
+    current_time = 0
+    quantum_left = 0
+
+    while True:
+        done = True
+        for i, process in enumerate(processes):
+            pid, arrival_time, burst_time, priority = process
+            if remaining_times[i] > 0:
+                done = False
+                if remaining_times[i] <= quantum:
+                    quantum_left = remaining_times[i]
+                else:
+                    quantum_left = quantum
+                current_time += quantum_left
+                remaining_times[i] -= quantum_left
+                if remaining_times[i] == 0:
+                    completion_times[i] = current_time
+                    waiting_times[i] = completion_times[i] - \
+                        arrival_time - burst_time
+                    turnaround_times[i] = completion_times[i] - arrival_time
+        if done:
+            break
+
+    average_waiting_time = sum(waiting_times) / len(waiting_times)
+    average_turnaround_time = sum(turnaround_times) / len(turnaround_times)
+
+    result = {}
+    result['processes'] = processes
+    result['completion_times'] = completion_times
+    result['waiting_times'] = waiting_times
+    result['turnaround_times'] = turnaround_times
+    result['average_waiting_time'] = average_waiting_time
+    result['average_turnaround_time'] = average_turnaround_time
+
+    return result
