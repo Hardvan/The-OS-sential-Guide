@@ -1,0 +1,222 @@
+/* Storing colors */
+:root {
+  --main-color: #112d4e;
+  --secondary-color: #3f72af;
+}
+
+.PageTitle {
+  text-align: center;
+  margin: 20px;
+  font-size: 3.7rem;
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+/* * Introduction */
+
+.Introduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.Introduction img {
+  width: 42%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.Introduction div {
+  width: 50%;
+  text-align: justify;
+}
+
+.Introduction h2 {
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.Introduction p {
+  font-family: "Work Sans", sans-serif;
+}
+
+/* * Types of CPU Scheduling */
+
+.TypesHeading {
+  text-align: center;
+  margin-bottom: 42px;
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.Types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center; /* Center align the child elements */
+  margin: 0 auto; /* Center align the div */
+  max-width: 1100px; /* Add a max-width to prevent the div from stretching too much */
+}
+
+.Types-Content {
+  display: flex;
+  width: 100%;
+}
+
+.Types-Content-1 {
+  flex-basis: 45%;
+  margin-right: 100px;
+}
+
+.Types-Content-2 {
+  flex-basis: 45%;
+}
+
+.Types-Content-1 img {
+  display: block;
+  margin: 0 auto;
+  width: 73%;
+  height: auto;
+}
+
+.Types-Content-2 img {
+  display: block;
+  margin: 0 auto;
+  width: 73%;
+  height: auto;
+}
+
+.Types-Content-1 h3,
+.Types-Content-2 h3 {
+  text-align: center;
+  font-family: "Vollkorn", serif;
+  margin: 20px;
+}
+
+.Types-Content-1 p,
+.Types-Content-2 p {
+  text-align: justify;
+  padding: 0 15px;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* * Scheduling Algorithms */
+.AlgorithmsHeading {
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+.Algorithm {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 20px;
+}
+
+.Algorithm img {
+  width: 69%;
+  height: auto;
+  margin-bottom: 10px;
+  /* Center align image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Algorithm h3 {
+  font-family: "Vollkorn", serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Algorithm p {
+  line-height: 1.5;
+  font-family: "Work Sans", sans-serif;
+  text-align: justify;
+  width: 69%;
+  margin: 0 auto;
+}
+
+.Algorithm figcaption {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* * CPU Scheduling Form */
+.FormHeading {
+  text-align: center;
+  margin-top: 42px;
+  margin-bottom: 42px;
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.Form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px;
+  text-align: center; /* center align form */
+  max-width: 400px; /* set max-width to reduce input width */
+  margin-left: auto; /* center align form horizontally */
+  margin-right: auto;
+  font-family: "Work Sans", sans-serif;
+}
+
+.Form h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.Form label {
+  display: inline-block;
+  font-weight: bold;
+  text-align: left; /* left align labels */
+  width: 30%; /* set label width */
+}
+
+.Form input[type="number"] {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-left: 2%; /* add some margin between label and input */
+  max-width: 65%; /* reduce input width */
+}
+
+.Form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: block; /* display button as block element */
+  margin-left: auto; /* center align button horizontally */
+  margin-right: auto;
+  width: 200px; /* set button width */
+}
+
+.Form button[type="submit"]:hover {
+  background-color: #0069d9;
+}

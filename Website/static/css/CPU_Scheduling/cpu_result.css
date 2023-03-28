@@ -1,0 +1,44 @@
+/* Storing colors */
+:root {
+  --main-color: #112d4e;
+  --secondary-color: #3f72af;
+}
+
+thead.thead-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.MyContainer {
+  padding: 20px;
+}
+
+.ResultHeading {
+  font-size: 3.7rem;
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.MyColumn {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.AlgoHeading {
+  font-family: "Vollkorn", serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.MyTable {
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+}
+
+.MyPara {
+  font-family: "Work Sans", sans-serif;
+}
