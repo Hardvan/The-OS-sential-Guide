@@ -147,6 +147,42 @@
             }}
           </p>
         </div>
+
+        <div class="col MyColumn">
+          <h2 class="text-center AlgoHeading">Round Robin Algorithm</h2>
+          <table class="table MyTable">
+            <thead class="thead-dark">
+              <tr>
+                <th>Process ID</th>
+                <th>Arrival Time</th>
+                <th>Burst Time</th>
+                <th>Priority</th>
+                <th>Completion Time</th>
+                <th>Waiting Time</th>
+                <th>Turnaround Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in range(RR_result.processes|length) %}
+              <tr>
+                <td>{{ RR_result.processes[i][0] }}</td>
+                <td>{{ RR_result.processes[i][1] }}</td>
+                <td>{{ RR_result.processes[i][2] }}</td>
+                <td>{{ RR_result.processes[i][3] }}</td>
+                <td>{{ RR_result.completion_times[i] }}</td>
+                <td>{{ RR_result.waiting_times[i] }}</td>
+                <td>{{ RR_result.turnaround_times[i] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <p class="text-center MyPara">
+            Average Waiting Time: {{ RR_result.average_waiting_time }}
+          </p>
+          <p class="text-center MyPara">
+            Average Turnaround Time: {{ RR_result.average_turnaround_time }}
+          </p>
+        </div>
       </div>
     </div>
   </body>

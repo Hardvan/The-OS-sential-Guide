@@ -62,10 +62,15 @@ def cpu_result():
         # Run Priority algorithm
         Priority_result = scheduling_algos.priority(processes)
 
+        # Run Round Robin algorithm
+        time_quantum = 2
+        RR_result = scheduling_algos.round_robin(processes, time_quantum)
+
         return render_template('cpu_result.html',
                                FCFS_result=FCFS_result,
                                SJF_result=SJF_result,
-                               Priority_result=Priority_result)
+                               Priority_result=Priority_result,
+                               RR_result=RR_result)
 
 
 if __name__ == "__main__":
