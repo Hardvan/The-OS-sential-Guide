@@ -1,6 +1,14 @@
 # Codebase for OS EL Project
 
-This repository contains a CPU scheduling algorithm implementation in Python using Flask web framework.
+This repository contains the codebase for the Operating Systems EL Project.
+
+## Topics
+
+1. CPU Scheduling
+2. Process Synchronization
+3. Multi-threading
+
+This repository also contains four CPU scheduling algorithms implementation in Python using Flask web framework.
 
 [Link to the website](http://theossentialguide.pythonanywhere.com/)
 
