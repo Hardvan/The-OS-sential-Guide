@@ -18,17 +18,32 @@
     <nav class="bg-black h-10 flex sticky-top">
       <div class="flex-col">
         <ul class="flex">
-          <li class="text-white mx-5 my-3">Home</li>
-          <li class="text-white mx-5 my-3">About</li>
-          <li class="text-white mx-5 my-3">ContactUs</li>
-          <select class="h-5 mx-5 my-3" name="Choose">
-            <option value="Choose">Select the topic</option>
-            <option value="Process Synchronisation">
-              Process Synchronisation
-            </option>
-            <option value="CPU scheduling">CPU scheduling</option>
-            <option value="Multithreading">Multithreading</option>
-          </select>
+          <li class="text-white mx-5 my-3">
+            <a href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="text-white mx-5 my-3">
+            <a href="{{ url_for('index') }}">About</a>
+          </li>
+          <li class="text-white mx-5 my-3">
+            <a href="{{ url_for('index') }}">ContactUs</a>
+          </li>
+          <li class="text-white mx-5 my-3">
+            <select
+              class="h-5"
+              name="Choose"
+              onchange="window.location.href=this.value;"
+            >
+              <option value="{{ url_for('cpu') }}" style="color: white">
+                Process Synchronisation
+              </option>
+              <option value="{{ url_for('cpu') }}" style="color: white">
+                CPU scheduling
+              </option>
+              <option value="{{ url_for('cpu') }}" style="color: white">
+                Multithreading
+              </option>
+            </select>
+          </li>
         </ul>
       </div>
     </nav>
