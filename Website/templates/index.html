@@ -77,27 +77,42 @@
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="../static/images/Home/wallpaper1.png"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../static/images/Home/wallpaper3.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../static/images/Home/wallpaper2.png"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
+          <a href="{{ url_for('prosync') }}">
+            <div class="carousel-item active">
+              <img
+                src="../static/images/Home/wallpaper1.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="CarouselText">Process Synchronisation</h3>
+              </div>
+            </div>
+          </a>
+          <a href="{{ url_for('cpu') }}">
+            <div class="carousel-item">
+              <img
+                src="../static/images/Home/wallpaper3.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="CarouselText">CPU Scheduling</h3>
+              </div>
+            </div>
+          </a>
+          <a href="{{ url_for('thread') }}">
+            <div class="carousel-item">
+              <img
+                src="../static/images/Home/wallpaper2.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="CarouselText">Multithreading</h3>
+              </div>
+            </div>
+          </a>
         </div>
         <button
           class="carousel-control-prev"

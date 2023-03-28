@@ -12,6 +12,14 @@
   margin-top: 2rem;
 }
 
+.CarouselText {
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 .card {
   background: linear-gradient(rgb(27, 237, 153), rgb(127, 229, 245));
   border-radius: 20px;
