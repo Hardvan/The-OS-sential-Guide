@@ -2,7 +2,7 @@
 
 This repository contains a CPU scheduling algorithm implementation in Python using Flask web framework.
 
-[Link to the website](http://hardvan.pythonanywhere.com/)
+[Link to the website](http://theossentialguide.pythonanywhere.com/)
 
 ## Requirements
 
