@@ -73,5 +73,16 @@ def cpu_result():
                                RR_result=RR_result)
 
 
+@app.route('/prosync')
+def prosync():
+    """Prosync Page
+
+    Returns:
+        [html]: [Prosync Page]
+    """
+
+    return render_template("prosync.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
