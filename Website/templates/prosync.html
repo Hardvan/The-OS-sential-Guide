@@ -27,17 +27,26 @@
           <li class="text-white mx-5 my-3">
             <a href="{{ url_for('index') }}">ContactUs</a>
           </li>
-          <li class="text-white mx-5 my-3">
+          <li class="text-black mx-5 my-3">
             <select
               class="h-5"
               name="Choose"
               onchange="window.location.href=this.value;"
             >
+              <option value="{{ url_for('prosync') }}" style="color: black">
+                Process Synchronisation
+              </option>
+              <option value="{{ url_for('cpu') }}" style="color: black">
+                CPU scheduling
+              </option>
+              <option value="{{ url_for('thread') }}" style="color: black">
+                Multithreading
+              </option>
               <option
                 value="{{ url_for('classicprosync') }}"
-                style="color: white"
+                style="color: black"
               >
-                Classical Problems of Process Synchronisation
+                Classic Problems of Synchronisation
               </option>
             </select>
           </li>
