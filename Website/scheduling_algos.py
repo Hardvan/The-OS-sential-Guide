@@ -228,5 +228,6 @@ def round_robin(processes, quantum):
     result['turnaround_times'] = turnaround_times
     result['average_waiting_time'] = average_waiting_time
     result['average_turnaround_time'] = average_turnaround_time
+    result["quantum"] = quantum
 
     return result

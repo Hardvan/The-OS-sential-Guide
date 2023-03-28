@@ -7,6 +7,7 @@ import scheduling_algos
 app = Flask(__name__)
 
 no_processes = 0
+time_quantum = 0
 
 
 @app.route('/')
@@ -31,8 +32,10 @@ def cpu():
     if request.method == 'POST':
 
         global no_processes
+        global time_quantum
         no_processes = int(request.form.get('num_processes'))
-        print(no_processes)
+        time_quantum = int(request.form.get('time_quantum'))
+        print(no_processes, time_quantum)
 
         return render_template('cpu.html', no_processes=no_processes)
 
@@ -63,7 +66,7 @@ def cpu_result():
         Priority_result = scheduling_algos.priority(processes)
 
         # Run Round Robin algorithm
-        time_quantum = 2
+        global time_quantum
         RR_result = scheduling_algos.round_robin(processes, time_quantum)
 
         return render_template('cpu_result.html',
