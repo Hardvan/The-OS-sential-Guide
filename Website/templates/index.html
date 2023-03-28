@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/Home/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <title>OS Home Page</title>
+  </head>
+  <body>
+    <nav class="bg-black h-10 flex sticky-top">
+      <div class="flex-col">
+        <ul class="flex">
+          <li class="text-white mx-5 my-3">Home</li>
+          <li class="text-white mx-5 my-3">About</li>
+          <li class="text-white mx-5 my-3">ContactUs</li>
+          <select class="h-5 mx-5 my-3" name="Choose">
+            <option value="Choose">Select the topic</option>
+            <option value="Process Synchronisation">
+              Process Synchronisation
+            </option>
+            <option value="CPU scheduling">CPU scheduling</option>
+            <option value="Multithreading">Multithreading</option>
+          </select>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../static/images/Home/procedit.jpg"
+            class="d-block w-100 h-[550px]"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../static/images/Home/Thread.jpg"
+            class="d-block w-100 h-[550px]"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../static/images/Home/cpu.jpg"
+            class="d-block w-100 h-[550px]"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <br /><br /><br />
+    <h1><b>BASIC CONCEPTS:</b></h1>
+
+    <div class="cards">
+      <div class="card card1">
+        <div class="container my-3">
+          <img src="../static/images/Home/processinmemory.png" alt="process" />
+        </div>
+        <div class="details">
+          <h3>Process in memory</h3>
+          <p>
+            A process is a program in execution.The above figure shows the
+            layout of a process in the memory. It is divided into different
+            sections: <br />
+            Stack:Contains return addresses,local variables and other temporary
+            data. <br />
+            Heap:Contains memory dynamically allocated during run time. <br />
+            Data section contains global variables. <br />
+            Text: Contains the output files.
+          </p>
+        </div>
+      </div>
+
+      <div class="card card2">
+        <div class="container my-4">
+          <img
+            src="../static/images/Home/Multitasking1.png"
+            alt="Multitasking"
+          />
+        </div>
+        <div class="details">
+          <h3>Multitasking</h3>
+          <p>
+            Multitasking, in an operating system, is allowing a user to perform
+            more than one computer task (such as the operation of an application
+            program) at a time. The operating system is able to keep track of
+            where you are in these tasks and go from one to the other without
+            losing information. <br />
+            <br />Microsoft Windows 2000, IBM's OS/390, and Linux are examples
+            of operating systems that can do multitasking (almost all of today's
+            operating systems can). When you open your Web browser and then open
+            Word at the same time, you are causing the operating system to do
+            multitasking.
+          </p>
+        </div>
+      </div>
+
+      <div class="card card3">
+        <div class="container my-5">
+          <img
+            src="../static/images/Home/pcb.png"
+            alt="Process control block "
+          />
+        </div>
+        <div class="details">
+          <h3>Process control block (PCB)</h3>
+          <p>
+            Information associated with each process (also called task control
+            block) <br />
+            <br />
+
+            Process state – running, waiting, etc <br /><br />
+
+            Program counter – location of instruction to next execute <br />
+            <br />
+
+            CPU registers – contents of all process-centric registers <br />
+            <br />
+
+            CPU scheduling information- priorities, scheduling queue pointers
+            <br />
+            <br />
+            Memory-management information – memory allocated to the process
+            <br />
+            <br />
+            Accounting information – CPU used, clock time elapsed since start,
+            time limits
+            <br />
+            <br />
+            I/O status information – I/O devices allocated to process, list of
+            open files
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -17,7 +17,7 @@ def index():
         [html]: [Home Page]
     """
 
-    return render_template("home.html")
+    return render_template("index.html")
 
 
 @app.route('/cpu', methods=['GET', 'POST'])
