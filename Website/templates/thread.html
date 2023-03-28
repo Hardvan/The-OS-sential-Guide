@@ -8,8 +8,6 @@
     <!-- Favicon -->
     <link rel="icon" href="../static/favicons/thread.png" />
 
-    <link rel="stylesheet" href="../static/css/Thread/style.css" />
-    <link rel="stylesheet" href="../static/css/Thread/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style1.css" />
     <link
@@ -20,6 +18,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
     />
+
+    <link rel="stylesheet" href="../static/css/Thread/style.css" />
+    <link rel="stylesheet" href="../static/css/Thread/output.css" />
+
+    <style>
+      body {
+        background-image: url({{url_for(
+            "static",
+            filename= "../static/images/Thread/bgimg.jpg"
+          )}});
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -64,31 +74,6 @@
       />
     </header>
 
-    <!-- <section>
-      <div class="shadow"></div>
-
-      <div class="container">
-        <div class="content opacity">
-          <h3 class="title">
-            About
-            <div class="border"></div>
-          </h3>
-          <p class="text">
-            A thread is a basic unit of CPU utilization; it comprises a thread
-            ID, a program counter, a register set, and a stack. It shares with
-            other threads belonging to the same process its code section, data
-            section, and other operating-system resources, such as open files
-            and signals. A traditional (or heavyweight) process has a single
-            thread of control. If a process has multiple threads of control, it
-            can perform more than one task at a time.
-          </p>
-        </div>
-
-        <div class="imgContainer opacity">
-          <img src="img/thread.jpeg" alt="" />
-        </div>
-      </div>
-    </section> -->
     <div class="wrap1">
       <div class="rem1">
         <h3 class="title">

@@ -44,7 +44,7 @@ thead.thead-dark {
 }
 
 /* Gantt Chart */
-/* .gantt-chart {
+.gantt-chart {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -69,4 +69,4 @@ thead.thead-dark {
   height: 50px;
   flex-grow: 0;
   width: 50px;
-} */
+}
