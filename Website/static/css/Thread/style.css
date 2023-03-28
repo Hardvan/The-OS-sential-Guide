@@ -293,6 +293,10 @@ section .container > * {
   color: #fff;
 }
 
+.QUIZ {
+  margin-bottom: 500px;
+}
+
 #footer {
   display: flex;
   background-color: black;
@@ -303,6 +307,7 @@ section .container > * {
   justify-content: center;
   border-top-color: rgb(63, 81, 181);
   border-top-width: 10px;
+  margin-top: 105x0px;
 }
 #end-center-left {
   text-align: center;
