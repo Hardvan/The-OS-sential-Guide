@@ -18,44 +18,56 @@
     <title>Classical Problems</title>
   </head>
   <body>
-    <nav class="bg-black h-10 flex sticky-top">
-      <div class="flex-col">
-        <ul class="flex">
-          <li class="text-white mx-5 my-3">
-            <a href="{{ url_for('index') }}">Home</a>
-          </li>
-          <li class="text-white mx-5 my-3">
-            <a href="{{ url_for('index') }}">About</a>
-          </li>
-          <li class="text-white mx-5 my-3">
-            <a href="{{ url_for('index') }}">ContactUs</a>
-          </li>
-          <li class="text-black mx-5 my-3">
-            <select
-              class="h-5"
-              name="Choose"
-              onchange="window.location.href=this.value;"
-            >
-              <option value="" selected disabled>Select a value</option>
-              <option value="{{ url_for('prosync') }}" style="color: black">
-                Process Synchronisation
-              </option>
-              <option value="{{ url_for('cpu') }}" style="color: black">
-                CPU scheduling
-              </option>
-              <option value="{{ url_for('thread') }}" style="color: black">
-                Multithreading
-              </option>
-              <option
-                value="{{ url_for('classicprosync') }}"
-                style="color: black"
+    <nav class="navbar navbar-expand-lg text-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="{{url_for('index')}}"
+          >The OS-sential Guide</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-light" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light text-light"
+                aria-current="page"
+                href="#"
+                >Home</a
               >
-                Classic Problems of Synchronisation
-              </option>
-            </select>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+      <select
+        class="h-5 text-black mr-8"
+        name="Choose"
+        onchange="window.location.href=this.value;"
+      >
+        <option class="text-black" value="" selected disabled>
+          Select a topic
+        </option>
+        <option value="{{ url_for('prosync') }}" style="color: black">
+          Process Synchronisation
+        </option>
+        <option value="{{ url_for('cpu') }}" style="color: black">
+          CPU scheduling
+        </option>
+        <option value="{{ url_for('thread') }}" style="color: black">
+          Multithreading
+        </option>
+        <option value="{{ url_for('classicprosync') }}" style="color: black">
+          Classic Problems of Synchronisation
+        </option>
+      </select>
     </nav>
 
     <h1 class="my-5 mx-2 text-3xl">
