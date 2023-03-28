@@ -16,6 +16,7 @@
     />
     <title>OS Home Page</title>
   </head>
+
   <body>
     <nav class="navbar navbar-expand-lg text-light bg-dark">
       <div class="container-fluid">
@@ -69,46 +70,6 @@
       </select>
     </nav>
 
-    <!--<nav class="bg-black h-10 flex sticky-top">
-      <div class="flex-col">
-        <ul class="flex">
-          <li class="text-white mx-5 my-3">
-            <a href="{{ url_for('index') }}">Home</a>
-          </li>
-          <li class="text-white mx-5 my-3">
-            <a href="{{ url_for('index') }}">About</a>
-          </li>
-          <li class="text-white mx-5 my-3">
-            <a href="{{ url_for('index') }}">ContactUs</a>
-          </li>
-          <li class="text-black mx-5 my-3">
-            <select
-              class="h-5"
-              name="Choose"
-              onchange="window.location.href=this.value;"
-            >
-              <option value="" selected disabled>Select a value</option>
-              <option value="{{ url_for('prosync') }}" style="color: black">
-                Process Synchronisation
-              </option>
-              <option value="{{ url_for('cpu') }}" style="color: black">
-                CPU scheduling
-              </option>
-              <option value="{{ url_for('thread') }}" style="color: black">
-                Multithreading
-              </option>
-              <option
-                value="{{ url_for('classicprosync') }}"
-                style="color: black"
-              >
-                Classic Problems of Synchronisation
-              </option>
-            </select>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
-
     <div
       id="carouselExampleAutoplaying"
       class="carousel slide"
@@ -117,21 +78,21 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="../static/images/Home/procedit.jpg"
+            src="../static/images/Home/wallpaper1.png"
             class="d-block w-100 h-[550px]"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
-            src="../static/images/Home/Thread.jpg"
+            src="../static/images/Home/wallpaper2.png"
             class="d-block w-100 h-[550px]"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
-            src="../static/images/Home/cpu.jpg"
+            src="../static/images/Home/wallpaper3.jpg"
             class="d-block w-100 h-[550px]"
             alt="..."
           />
