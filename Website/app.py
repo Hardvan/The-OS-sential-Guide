@@ -95,5 +95,16 @@ def cpu_result():
                                RR_result=RR_result)
 
 
+@app.route('/thread')
+def thread():
+    """Thread Scheduling Page
+
+    Returns:
+        [html]: [Thread Scheduling Page]
+    """
+
+    return render_template("thread.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)

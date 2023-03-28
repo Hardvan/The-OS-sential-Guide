@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Parallax Scrolling Effect</title>
+
+    <link rel="stylesheet" href="../static/css/Thread/style.css" />
+    <link rel="stylesheet" href="../static/css/Thread/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <h3 class="logo">OS Experiential Learning<span></span></h3>
+          <!-- <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div> -->
+        </div>
+      </nav>
+
+      <h1 class="big-title translate" data-speed="0.1">Threading</h1>
+
+      <img
+        src="img/person.png"
+        class="person translate"
+        data-speed="-0.25"
+        alt=""
+      />
+      <video
+        src="../static/images/Thread/animation1.mp4"
+        type="video/mp4"
+      ></video>
+      <img
+        src="../static/images/Thread/mountain2.png"
+        class="mountain2 translate"
+        data-speed="0.4"
+        alt=""
+      />
+      <img
+        src="../static/images/Thread/animation1.mp4"
+        class="mountain3 translate"
+        data-speed="0.3"
+        alt=""
+      />
+      <img
+        src="../static/images/Thread/sky.png"
+        class="sky translate"
+        data-speed="0.5"
+        alt=""
+      />
+    </header>
+
+    <!-- <section>
+      <div class="shadow"></div>
+
+      <div class="container">
+        <div class="content opacity">
+          <h3 class="title">
+            About
+            <div class="border"></div>
+          </h3>
+          <p class="text">
+            A thread is a basic unit of CPU utilization; it comprises a thread
+            ID, a program counter, a register set, and a stack. It shares with
+            other threads belonging to the same process its code section, data
+            section, and other operating-system resources, such as open files
+            and signals. A traditional (or heavyweight) process has a single
+            thread of control. If a process has multiple threads of control, it
+            can perform more than one task at a time.
+          </p>
+        </div>
+
+        <div class="imgContainer opacity">
+          <img src="img/thread.jpeg" alt="" />
+        </div>
+      </div>
+    </section> -->
+    <div class="wrap1">
+      <div class="rem1">
+        <h3 class="title">
+          About
+          <div className="flex justify-center">
+            <div class="h-1 w-20 bg-indigo-500 rounded mb-2"></div>
+          </div>
+        </h3>
+        <div class="flex_box">
+          <div class="texto textleft">
+            A thread is a basic unit of CPU utilization; it comprises a thread
+            ID, a program counter, a register set, and a stack. It shares with
+            other threads belonging to the same process its code section, data
+            section, and other operating-system resources, such as open files
+            and signals. A traditional (or heavyweight) process has a single
+            thread of control. If a process has multiple threads of control, it
+            can perform more than one task at a time.
+          </div>
+          <div class="img_right">
+            <img src="../static/images/Thread/thread.jpeg" alt="" />
+          </div>
+        </div>
+        <h3 class="title">
+          Multithreading Models
+          <div className="flex justify-center">
+            <div class="h-1 w-72 bg-indigo-500 rounded mb-2"></div>
+          </div>
+        </h3>
+        <div class="flex_box">
+          <div class="texto">
+            Support for threads may be provided either at the user level, for
+            user threads, or by the kernel, for kernel threads. User threads are
+            supported above the kernel and are managed without kernel support,
+            whereas kernel threads are supported and managed directly by the
+            operating system. Virtually all contemporary operating
+            systems—including Windows, Linux, Mac OS X, and Solaris— support
+            kernel threads. Ultimately, a relationship must exist between user
+            threads and kernel threads. In this section, we look at three common
+            ways of establishing such a relationship: the many-to-one model, the
+            one-to-one model, and the many-to-many model.
+          </div>
+        </div>
+
+        <h3 class="title">
+          <div class="bg-indigo-500 w-[50px]"></div>
+          &#8226; Many To One Model
+          <div className="flex justify-center">
+            <div class="h-1 w-60 ml-4 bg-indigo-500 rounded mb-2"></div>
+          </div>
+        </h3>
+        <div class="flex_box">
+          <div class="texto textleft mt-8">
+            The many-to-one model maps many user-level threads to one kernel
+            thread. Thread management is done by the thread library in user
+            space, so it is efficient. However, the entire process will block if
+            a thread makes a blocking system call. Also, because only one thread
+            can access the kernel at a time, multiple threads are unable to run
+            in parallel on multicore systems. Green threads—a thread library
+            available for Solaris systems and adopted in early versions of
+            Java—used the many-to-one model. However, very few systems continue
+            to use the model because of its inability to take advantage of
+            multiple processing cores.
+          </div>
+          <div class="img_right mt-0 mb-8">
+            <img
+              class="w-[300px]"
+              src="../static/images/Thread/m21.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <h3 class="title mb-12">
+          <div class="bg-indigo-500 w-[50px]"></div>
+          &#8226; One To One Model
+          <div className="flex justify-center">
+            <div class="h-1 ml-4 w-56 bg-indigo-500 rounded mb-2"></div>
+          </div>
+        </h3>
+        <div class="flex_box">
+          <div class="img_right mt-8 mb-8">
+            <img
+              class="w-[350px] mt-16"
+              src="../static/images/Thread/1t01ed.png"
+              alt=""
+            />
+          </div>
+          <div class="texto textleft mt-8">
+            The one-to-one model maps each user thread to a kernel thread. It
+            provides more concurrency than the many-to-one model by allowing
+            another thread to run when a thread makes a blocking system call. It
+            also allows multiple threads to run in parallel on multiprocessors.
+            The only drawback to this model is that creating a user thread
+            requires creating the corresponding kernel thread. Because the
+            overhead of creating kernel threads can burden the performance of an
+            application, most implementations of this model restrict the number
+            of threads supported by the system. Linux, along with the family of
+            Windows operating systems, implement the one-to-one model.
+          </div>
+        </div>
+        <h3 class="title">
+          <div class="bg-indigo-500 w-[50px]"></div>
+          &#8226; Many To Many Model
+          <div className="flex justify-center">
+            <div class="h-1 w-64 ml-4 bg-indigo-500 rounded mb-2"></div>
+          </div>
+        </h3>
+        <div class="flex_box">
+          <div class="texto textleft mt-8">
+            The many-to-many model multiplexes many user-level threads to a
+            smaller or equal number of kernel threads. The number of kernel
+            threads may be specific to either a particular application or a
+            particular machine (an application may be allocated more kernel
+            threads on a multiprocessor than on a single processor).<br />
+            Let’s consider the effect of this design on concurrency. Whereas the
+            many to-one model allows the developer to create as many user
+            threads as she wishes, it does not result in true concurrency,
+            because the kernel can schedule only one thread at a time. The
+            one-to-one model allows greater concurrency, but the developer has
+            to be careful not to create too many threads within an application
+            (and in some instances may be limited in the number of threads she
+            can create). <br />The many-to-many model suffers from neither of
+            these shortcomings: developers can create as many user threads as
+            necessary, and the corresponding kernel threads can run in parallel
+            on a multiprocessor. Also, when a thread performs a blocking system
+            call, the kernel can schedule another thread for execution.
+          </div>
+          <div class="img_right mt-0 mb-8">
+            <img
+              class="w-[500px] center ml-[200px] mt-24"
+              src="../static/images/Thread/mtm1.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <h3 class="title">
+          Pthreads
+          <div className="flex justify-center">
+            <div class="h-1 w-28 bg-indigo-500 rounded mb-2"></div>
+          </div>
+        </h3>
+        <div class="flex_box">
+          <div class="texto">
+            Pthreads refers to the POSIX standard defining an API for thread
+            creation and synchronization. This is a specification for thread
+            behavior, not an implementation. Operating-system designers may
+            implement the specification in any way they wish. Numerous systems
+            implement the Pthreads specification; most are UNIX-type systems,
+            including Linux, Mac OS X, and Solaris. Although Windows doesn’t
+            support Pthread natively, some third party implementaions are
+            available.<br />The C program shown below demonstrates the basic
+            Pthreads API for constructing a multithreaded program that
+            calculates the summation of a non negative integer in a separate
+            thread. In a Pthreads program, separate threads begin execution in a
+            specified function. When this program begins, a single thread of
+            control begins in main(). After some initialization, main() creates
+            a second thread that begins control in the runner() function. Both
+            threads share the global data sum. <br />
+            This example program creates only a single thread. With the growing
+            dominance of multicore systems, writing programs containing several
+            threads has become increasingly common. A simple method for waiting
+            on several threads using the pthread join() function is to enclose
+            the operation within a simple for loop.
+          </div>
+        </div>
+        <div class="flex justify-center roundit">
+          <img
+            class="center mt-16 roundit hover:w-[700px] hover:shadow-cyan-600 hover:shadow-xl hover:shadow-inner"
+            src="../static/images/Thread/pthread.png"
+            alt=""
+          />
+        </div>
+
+        <h3 class="title mt-24">
+          <div class="bg-indigo-500 w-[50px]"></div>
+          Quiz
+          <div className="flex justify-center">
+            <div class="h-1 w-12 bg-indigo-500 rounded mb-2"></div>
+          </div>
+        </h3>
+        <div class="content mt-24">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="result" class="quiz-body">
+                  <form name="quizForm" onSubmit="">
+                    <fieldset class="form-group">
+                      <h4>
+                        <span id="qid">1.</span> <span id="question"></span>
+                      </h4>
+                      <div
+                        class="option-block-container"
+                        id="question-options"
+                      ></div>
+                      <!-- End of option block -->
+                    </fieldset>
+                    <button
+                      name="previous"
+                      id="previous"
+                      class="btn btn-success"
+                    >
+                      Previous
+                    </button>
+                    &nbsp;
+                    <button name="next" id="next" class="btn btn-success">
+                      Next
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <!-- End of col-sm-12 -->
+            </div>
+            <!-- End of row -->
+          </div>
+          <!-- ENd of container fluid -->
+        </div>
+        <!-- End of content -->
+        <!-- <video controls autoplay>
+          <source src="./img/animation1.mp4" type="video/mp4" />
+        </video> -->
+      </div>
+    </div>
+
+    <div style="height: 1000px"><h1>New proj</h1></div>
+    <!-- footer from here -->
+    <div id="footer">
+      <div id="end-center-left">
+        <h2>EXPERIENTIAL LEARNING</h2>
+        <div className="flex justify-center">
+          <div class="h-1 w-44 bg-indigo-500 rounded mb-2"></div>
+        </div>
+        <h4>OPERATING SYSTEMS</h4>
+        <div class="flex justify-center">
+          <div class="h-1 w-40 bg-indigo-500 rounded"></div>
+        </div>
+      </div>
+
+      <div id="end-center-right">
+        <h4>Contact Us</h4>
+        <div>
+          <div class="h-1 w-24 mb-2 bg-indigo-500 rounded"></div>
+        </div>
+        <div>Ph No: +917348911401</div>
+        <div>e-mail: karan.sathish980@gmail.com</div>
+      </div>
+    </div>
+
+    <div id="icons">
+      <img
+        class="img-1"
+        src="{{url_for('static', filename='images/icons/thumbnails/insta.jfif')}}"
+        alt=""
+      />
+      <img
+        class="img-1"
+        src="{{url_for('static', filename='images/icons/thumbnails/linkedin.png')}}"
+        alt=""
+      />
+      <img
+        class="img-1"
+        src="{{url_for('static', filename='images/icons/thumbnails/twitter.png')}}"
+        alt=""
+      />
+      <img
+        class="img-1"
+        src="{{url_for('static', filename='images/icons/thumbnails/facebook.png')}}"
+        alt=""
+      />
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="../js/app2.js"></script>
+  </body>
+</html>
