@@ -42,3 +42,31 @@ thead.thead-dark {
 .MyPara {
   font-family: "Work Sans", sans-serif;
 }
+
+/* Gantt Chart */
+/* .gantt-chart {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+  width: auto;
+}
+
+.gantt-bar {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #007bff;
+  position: relative;
+  margin-right: 0;
+  margin-bottom: 10px;
+  height: 50px;
+  flex-grow: 0;
+  width: 50px;
+} */

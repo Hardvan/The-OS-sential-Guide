@@ -73,6 +73,19 @@
           <p class="text-center MyPara">
             Average Turnaround Time: {{ FCFS_result.average_turnaround_time }}
           </p>
+
+          <!--   <div class="gantt-chart">
+            {% for i in range(FCFS_result.processes|length) %}
+            <div
+              class="gantt-bar"
+              style="left: {{ FCFS_result.start_times[i]/FCFS_result.completion_times[-1] * 100 }}%; width: {{ FCFS_result.burst_times[i]/FCFS_result.completion_times[-1] * 100 }}%;"
+            >
+              P{{ FCFS_result.processes[i][0] }}<br />
+              {{ FCFS_result.start_times[i] }} - {{
+              FCFS_result.completion_times[i] }}
+            </div>
+            {% endfor %}
+          </div> -->
         </div>
 
         <div class="col MyColumn">

@@ -10,6 +10,7 @@ def fcfs(processes):
     Returns:
         result (dict): Dictionary containing the following:
         - processes (list): List of processes (tuples)
+        - start_times (list): List of start times (int)
         - completion_times (list): List of completion times (int)
         - waiting_times (list): List of waiting times (int)
         - turnaround_times (list): List of turnaround times (int)
@@ -20,6 +21,8 @@ def fcfs(processes):
     processes = copy.deepcopy(processes)
 
     processes.sort(key=lambda x: x[1])  # Sort by arrival time
+    start_times = []
+    burst_times = [process[2] for process in processes]
     completion_times = []
     waiting_times = []
     turnaround_times = []
@@ -29,11 +32,13 @@ def fcfs(processes):
         pid, arrival_time, burst_time, priority = process
 
         current_time = max(current_time, arrival_time)
+        start_time = current_time  # Store the start time
 
         completion_time = current_time + burst_time
         waiting_time = current_time - arrival_time
         turnaround_time = waiting_time + burst_time
 
+        start_times.append(start_time)
         completion_times.append(completion_time)
         waiting_times.append(waiting_time)
         turnaround_times.append(turnaround_time)
@@ -45,6 +50,8 @@ def fcfs(processes):
 
     result = {}
     result['processes'] = processes
+    result['start_times'] = start_times
+    result['burst_times'] = burst_times
     result['completion_times'] = completion_times
     result['waiting_times'] = waiting_times
     result['turnaround_times'] = turnaround_times
