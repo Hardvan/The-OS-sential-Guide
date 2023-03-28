@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="prosync.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="bg-black h-10 flex sticky-top">
+      <div class="flex-col">
+        <ul class="flex">
+          <li class="text-white mx-5 my-3">Home</li>
+          <li class="text-white mx-5 my-3">About</li>
+          <li class="text-white mx-5 my-3">ContactUs</li>
+          <select class="h-5 mx-5 my-3" name="Choose">
+            <option value="Choose">Select the topic</option>
+            <option value="Process Synchronisation">
+              Process Synchronisation
+            </option>
+            <option value="CPU scheduling">CPU scheduling</option>
+            <option value="Multithreading">Multithreading</option>
+          </select>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="my-5 mx-2 text-3xl">
+      <strong>Classic Problems of Synchronization</strong>
+    </h1>
+
+    <br />
+    <h1 class="mx-2 text-3xl"><strong>Bounded buffer Problem</strong></h1>
+
+    <p class="mx-4">
+      <strong
+        >The bounded-buffer problems (aka the producer-consumer problem) is a
+        classic example of concurrent access to a shared resource. A bounded
+        buffer lets multiple producers and multiple consumers share a single
+        buffer. Producers write data to the buffer and consumers read data from
+        the buffer. <br />
+        <br />
+
+        1.Producers must block if the buffer is full. <br />
+        2.Consumers must block if the buffer is empty.</strong
+      >
+    </p>
+
+    <img
+      class="mx-[250px] h-[500px] w-[1100px]"
+      src="../static/images/ProSync/bounded.png"
+      alt="bounded-buffer"
+    />
+
+    <div class="flex flex-row">
+      <img
+        class="my-3 mx-5 h-[400px] w-[600px]"
+        src="../static/images/ProSync/bound-bufcode.png"
+        alt="bounded"
+      /><img
+        class="my-3 mx-[200px] h-[400px] w-[600px]"
+        src="../static/images/ProSync/consumer code.png"
+        alt="cousumer"
+      />
+    </div>
+
+    <h1 class="mx-2 text-3xl"><strong>Reader-Writer Problem</strong></h1>
+    <br />
+
+    <p class="mx-4">
+      <strong>
+        Consider a situation where we have a file shared between many people.
+
+        <br />
+        If one of the person tries editing the file, no other person should be
+        reading or writing at the same time, otherwise changes will not be
+        visible to him/her. <br />
+        However if some person is reading the file, then others may read it at
+        the same time. Precisely in OS we call this situation as the
+        readers-writers problem
+
+        <br />
+        Problem parameters: <br />
+
+        <br />1.One set of data is shared among a number of processes
+        <br />2.Once a writer is ready, it performs its write. Only one writer
+        may write at a time <br />3.If a process is writing, no other process
+        can read it <br />4.If at least one reader is reading, no other process
+        can write <br />5.Readers may not write and only read <br />
+        <br />
+        There are four Types of cases could happen here.</strong
+      >
+    </p>
+
+    <img
+      class="my-3 mx-[400px] h-[400px] w-[600px]"
+      src="../static/images/ProSync/case.png"
+      alt="cases"
+    />
+
+    <div class="flex flex-row">
+      <img
+        class="my-3 mx-5 h-[400px] w-[600px]"
+        src="../static/images/ProSync/writer.png"
+        alt="bounded"
+      /><img
+        class="my-3 mx-[200px] h-[400px] w-[600px]"
+        src="../static/images/ProSync/reader.png"
+        alt="cousumer"
+      />
+    </div>
+
+    <h1 class="mx-2 text-3xl"><strong>Dining Philosopher's Problem</strong></h1>
+
+    <img
+      class="my-3 mx-[400px] h-[400px] w-[600px]"
+      src="../static/images/ProSync/dining.png"
+      alt="Philosopher"
+    />
+
+    <p class="mx-4">
+      <strong
+        >The Dining Philosopher Problem states that K philosophers seated around
+        a circular table with one chopstick between each pair of philosophers.
+        There is one chopstick between each philosopher. A philosopher may eat
+        if he can pick up the two chopsticks adjacent to him. One chopstick may
+        be picked up by any one of its adjacent followers but not both.
+        <br />There are three states of the philosopher: THINKING, HUNGRY, and
+        EATING. Here there are two semaphores: Mutex and a semaphore array for
+        the philosophers. Mutex is used such that no two philosophers may access
+        the pickup or putdown at the same time. The array is used to control the
+        behavior of each philosopher. But, semaphores can result in deadlock due
+        to programming errors.
+      </strong>
+    </p>
+
+    <p class="mx-4"><strong> Structure for philosopher i:</strong></p>
+    <br />
+    <img
+      class="my-3 mx-[400px] h-[400px] w-[600px]"
+      src="../static/images/ProSync/phil.png"
+      alt="Phil"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

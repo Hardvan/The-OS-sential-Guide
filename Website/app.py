@@ -20,6 +20,28 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/prosync')
+def prosync():
+    """Prosync Page
+
+    Returns:
+        [html]: [Prosync Page]
+    """
+
+    return render_template("prosync.html")
+
+
+@app.route('/classicprosync')
+def classicprosync():
+    """Classic Prosync Page
+
+    Returns:
+        [html]: [Classic Prosync Page]
+    """
+
+    return render_template("classicprosync.html")
+
+
 @app.route('/cpu', methods=['GET', 'POST'])
 def cpu():
     """CPU Scheduling Page
@@ -71,17 +93,6 @@ def cpu_result():
                                SJF_result=SJF_result,
                                Priority_result=Priority_result,
                                RR_result=RR_result)
-
-
-@app.route('/prosync')
-def prosync():
-    """Prosync Page
-
-    Returns:
-        [html]: [Prosync Page]
-    """
-
-    return render_template("prosync.html")
 
 
 if __name__ == "__main__":
