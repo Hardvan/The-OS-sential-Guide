@@ -1,0 +1,4 @@
+1. Open Files
+2. Create directory
+3. git clone from GitHub
+4. In Web App, under Code section, add Source Code and Working Directory links
