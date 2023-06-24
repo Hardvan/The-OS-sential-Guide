@@ -10,7 +10,10 @@ This repository contains the codebase for the Operating Systems EL Project.
 
 This repository also contains four CPU scheduling algorithms implementation in Python using Flask web framework.
 
-[Link to the website](http://theossentialguide.pythonanywhere.com/)
+## Link to the website
+
+- On [PythonAnywhere](http://theossentialguide.pythonanywhere.com/)
+- On [Render](https://theossentialguide.onrender.com/)
 
 ## Requirements
 
