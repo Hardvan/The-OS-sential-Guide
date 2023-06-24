@@ -12,8 +12,8 @@ This repository also contains four CPU scheduling algorithms implementation in P
 
 ## Link to the website
 
-- On [PythonAnywhere](http://theossentialguide.pythonanywhere.com/)
 - On [Render](https://theossentialguide.onrender.com/)
+- On [PythonAnywhere](http://theossentialguide.pythonanywhere.com/)
 
 ## Requirements
 
